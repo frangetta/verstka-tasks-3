@@ -1,0 +1,133 @@
+body {
+    font-family: Arial;
+}
+table {
+    margin: 50px 0 0 0;
+    overflow: hidden;
+    border-spacing: 0;
+    position: relative;
+    white-space: nowrap;
+    border: 1px;
+    border-bottom-color: grey;
+    border-style: solid;
+}
+form {
+    margin: 20px;
+}
+thead {
+    background: #205081;
+}
+input {
+    margin: 5px;
+}
+tbody::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 10000px;
+    background: url('bg.png') 0 40px;
+    z-index: -2;
+}
+tr.rusline td:nth-child(4) {
+    background-image: url(http://www.koltsovo.ru/attels/logo4site/382.gif);
+}
+tr.utair td:nth-child(4) {
+    background-image: url(http://www.koltsovo.ru/attels/logo4site/515.gif);
+}
+tr td:nth-child(4) {
+    background-size: 80px 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+tr.klm td:nth-child(4) {
+    background-image: url(http://www.koltsovo.ru/attels/logo4site/116.gif);
+}
+tr.aeroflot td:nth-child(4) {
+    background-image: url(http://www.koltsovo.ru/attels/logo4site/397.gif);
+}
+tr.uralairlines td:nth-child(4) {
+    background-image: url(http://www.koltsovo.ru/attels/logo4site/416.gif);
+}
+tr.departure td:first-child {
+    background-image: url(
+    http://st2.depositphotos.com/5266903/8783/v/170/depositphotos_87836564-Airplane-Departure-Flat-Icon.jpg);
+}
+tr.landing td:first-child {
+    background-image: url(
+    http://st2.depositphotos.com/5266903/8769/v/170/depositphotos_87694702-Aiplane-Landing-Flat-Icon.jpg);
+}
+tr td:first-child {
+    background-size: 15px 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+td {
+    height: 30px;
+    position: relative;
+    padding: 5px;
+}
+tbody td:hover::after,
+tbody td:hover::before{
+    position: absolute;
+    content: "";
+    opacity: 0.5;
+    z-index: -1;
+    background-color: #fbde56;
+    
+}
+tbody td:hover::after {
+    left: 0px;
+    margin-bottom: -1000px;
+    margin-top: -1000px;
+    height: 9999px;
+    width: 100%;
+}
+tbody td:hover::before {
+    top: 0;
+    margin-left: -2000px;
+    height: 100%;
+    width: 9999px; 
+}
+[value="Красноярск"] ~ table tr.krasnoyarsk,
+[value="Москва"] ~ table tr.moscow,
+[value="Нью-Йорк"] ~ table tr.new-york,
+[value="Пермь"] ~ table tr.perm,
+[value="Сызрань"] ~ table tr.syzran,
+[value="Санкт-Петербург"] ~ table tr.st-petersburg,
+[value="Воронеж"] ~ table tr.voronezh,
+[value="Париж"] ~ table tr.paris,
+[value="Лондон"] ~ table tr.london,
+[value="Ханты-Мансийск"] ~ table tr.khanty-mansiysk,
+[value="Владивосток"] ~ table tr.vladivostok,
+[value="Красноярск"] ~ table tr.krasnoyarsk,
+[value="Стрежевой"] ~ table tr.strezhevoy,
+[value="Ярославль"] ~ table tr.yaroslavl {
+    display: table-row;
+}
+[value="Красноярск"] ~ table tbody tr,
+[value="Москва"] ~ table tbody tr,
+[value="Нью-Йорк"] ~ table tbody tr,
+[value="Пермь"] ~ table tbody tr,
+[value="Сызрань"] ~ table tbody tr,
+[value="Санкт-Петербург"] ~ table tbody tr,
+[value="Воронеж"] ~ table tbody tr,
+[value="Париж"] ~ table tbody tr,
+[value="Лондон"] ~ table tbody tr,
+[value="Ханты-Мансийск"] ~ table tbody tr,
+[value="Владивосток"] ~ table tbody tr,
+[value="Красноярск"] ~ table tbody tr,
+[value="Стрежевой"] ~ table tbody tr,
+[value="Ярославль"] ~ table tbody tr {
+    display: none;
+}
+[value="show-departure"]:checked ~ table tr.landing {
+    display: none;
+}
+[value="show-landing"]:checked ~ table tr.departure {
+    display: none;
+}
+[type="email"]:invalid ~[type="submit"],
+[name="phone"]:invalid ~[type="submit"] {
+    visibility: hidden;
+}
