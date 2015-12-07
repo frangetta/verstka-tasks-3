@@ -41,36 +41,14 @@ tbody::before
     z-index: -2;
 }
 
-tr.rusline td:nth-child(4) 
+tr td:nth-child(4)
 {
-    background-image: url(http://www.koltsovo.ru/attels/logo4site/382.gif);
+    text-align:center;  
 }
 
-tr.utair td:nth-child(4) 
+tr td:nth-child(4) img
 {
-    background-image: url(http://www.koltsovo.ru/attels/logo4site/515.gif);
-}
-
-tr td:nth-child(4) 
-{
-    background-size: 80px 30px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-tr.klm td:nth-child(4) 
-{
-    background-image: url(http://www.koltsovo.ru/attels/logo4site/116.gif);
-}
-
-tr.aeroflot td:nth-child(4) 
-{
-    background-image: url(http://www.koltsovo.ru/attels/logo4site/397.gif);
-}
-
-tr.uralairlines td:nth-child(4) 
-{
-    background-image: url(http://www.koltsovo.ru/attels/logo4site/416.gif);
+    vertical-align: middle;
 }
 
 tr.departure td:first-child 
